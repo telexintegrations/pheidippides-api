@@ -14,7 +14,7 @@ This project is an interval integration for telex built with FastAPI receiving d
 ## Project Structure
 
 ```
-fastapi-book-project/
+pheidippides-api/
 ├── api/
 │   ├── routes/
 │   │   ├── __init__.py
