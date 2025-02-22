@@ -80,8 +80,8 @@ uvicorn main:app
 
 ### Books
 
-- `GET /pheidippides-api/integration.json` - JSON output required be telex.
-- `POST /pheidippides-api/tick` - Endpoint used by telex to make requests.
+- `GET /integration.json` - JSON output required be telex.
+- `POST /tick` - Endpoint used by telex to make requests.
 - `PUT /` - Get integration details.
 
 

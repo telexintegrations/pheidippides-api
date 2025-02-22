@@ -44,7 +44,7 @@ def integration_json(request: Request):
                 "app_name": "Pheidippides API",
                 "app_description": "An integration that suggests books to read based on any selected genre.",
                 "app_logo": "https://i.imgur.com/D2619X4.jpeg",
-                "app_url": f"{base_url}/pheidippides-api", #change to an env variable
+                "app_url": f"{base_url}/", #change to an env variable
                 "background_color": "#fff"
             },
             "is_active": True,
@@ -82,7 +82,7 @@ def integration_json(request: Request):
                 }
             ],
             "target_url": os.getenv("TELEX_WEBHOOK"),
-            "tick_url": f"{base_url}/pheidippides-api/tick" #change to an env variable
+            "tick_url": f"{base_url}/tick" #change to an env variable
         }
     }
 
@@ -150,6 +150,8 @@ async def receive_telex_payload(telex_payload: TelexPayload):
         except:
             return JSONResponse({"error": "Error communicating with telex"})
         
+# @router.on_event("startup")
+# async def 
 
 #telex tick_url endpoint
 @router.post("/tick")
