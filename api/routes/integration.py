@@ -3,6 +3,10 @@ from fastapi import APIRouter, BackgroundTasks, Request, status
 import httpx
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 router = APIRouter()
 
@@ -77,7 +81,7 @@ def integration_json(request: Request):
                     "default": "* * * * *"
                 }
             ],
-            "target_url": "",
+            "target_url": os.getenv("TELEX_WEBHOOK"),
             "tick_url": f"{base_url}/pheidippides-api/tick" #change to an env variable
         }
     }
