@@ -135,13 +135,18 @@ async def receive_telex_payload(telex_payload: TelexPayload):
     
     pheidippides_message = await get_recommendation(genre)
     
-    payload = PheidippidesPayload(message=pheidippides_message)
+    data = {
+        "event_name": "Daily Book Recommendation",
+        "message" : pheidippides_message,
+        "username": "Pheidippides API",
+        "status": "success"
+    }
 
     async with httpx.AsyncClient() as http_client:
         try:
             response = await http_client.post(
                 telex_payload.return_url, #change to channel_url
-                json=payload.model_dump(),
+                json=data,
                 headers={
                     "Accept" : "application/json",
                     "Content-Type": "application/json"}
