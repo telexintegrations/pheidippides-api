@@ -136,7 +136,7 @@ async def receive_telex_payload(telex_payload: TelexPayload):
     async with httpx.AsyncClient() as http_client:
         try:
             response = await http_client.post(
-                "https://ping.telex.im/v1/webhooks/0195057a-ebc9-7646-af52-41800fa80490", #change to channel_url
+                telex_payload.return_url, #change to channel_url
                 json=payload.model_dump(),
                 headers={
                     "Accept" : "application/json",
