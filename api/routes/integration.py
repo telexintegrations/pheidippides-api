@@ -159,7 +159,7 @@ async def receive_telex_payload(telex_payload: TelexPayload):
 # async def 
 
 #telex tick_url endpoint
-@router.post("/tick")
+@router.post("/tick", status_code=status.HTTP_202_ACCEPTED)
 async def tick_url(telex_payload: TelexPayload, background_tasks: BackgroundTasks):
     background_tasks.add_task(receive_telex_payload, telex_payload)
     return JSONResponse({"status": "accepted"})
