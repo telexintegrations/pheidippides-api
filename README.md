@@ -24,9 +24,9 @@ fastapi-book-project/
 ├── core/
 │   ├── __init__.py
 │   └── config.py           # Application settings
-<!-- ├── tests/ -->
-<!-- │   ├── __init__.py -->
-<!-- │   └── test_books.py       # API endpoint tests -->
+├── tests/
+│   ├── __init__.py -->
+│   └── test_url.py       # API endpoint tests
 ├── main.py                 # Application entry point
 ├── requirements.txt        # Project dependencies
 └── README.md
@@ -37,7 +37,7 @@ fastapi-book-project/
 - Python 3.12
 - FastAPI
 - Pydantic
-<!-- - pytest -->
+- pytest
 - uvicorn
 - httpx
 
