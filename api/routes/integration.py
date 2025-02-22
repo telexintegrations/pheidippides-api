@@ -77,7 +77,7 @@ def integration_json(request: Request):
                     "default": "* * * * *"
                 }
             ],
-            # "target_url": "\"\"",
+            "target_url": "",
             "tick_url": f"{base_url}/pheidippides-api/tick" #change to an env variable
         }
     }
