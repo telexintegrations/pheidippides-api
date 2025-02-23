@@ -98,11 +98,6 @@ Available genres:
 - comedy
 - nigerian
 
-<!-- ## Running Tests
-
-```bash
-pytest
-``` -->
 
 ## Contributing
 
@@ -126,6 +121,18 @@ For support, please open an issue in the GitHub repository.
 # How to use on Telex
 
 Choose any provider (such as render or fly.io) to deploy the endpoint, thereby making it available publicly.
+
+## Running Tests using curl
+
+    curl -X POST "https://pheidippides-api.onrender.com/tick" \
+    -H "Content-Type: application/json" \
+    -d '{
+            "channel_id": "#channel_id on telex",
+            "return_url": "#channel_webhook on telex",
+            "settings": [
+                {"label": "genre", "type": "dropdown", "required": true, "default": "random"}, 
+                {"label": "interval", "type": "text", "required": true, "default": "* * * * *"}]
+        }'
 
 To setup on Telex, create an app then enter the publicly available /integration.json link for it to be registed on telex
 
