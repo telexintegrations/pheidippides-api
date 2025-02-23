@@ -125,3 +125,29 @@ For support, please open an issue in the GitHub repository.
 
 # How to use on Telex
 
+Choose any provider (such as render or fly.io) to deploy the endpoint, thereby making it available publicly.
+
+To setup on Telex, create an app then enter the publicly available /integration.json link for it to be registed on telex
+
+![adding integration to telex](image.png)
+
+On clicking the manage app option tou should have this
+
+![available integration](image-1.png)
+
+Click on connect app, then proceed to setting to configure your desired genre and notification interval (it follows a crontab syntax), then save settings
+
+![configuring settings](image-2.png)
+
+Go to channels, to configure the app under a specific channel meant for receiving said notifications
+
+![test channel](image-3.png)
+
+click on configure apps, then turn it on for that specific channel
+
+![test channel integration configuration](image-4.png)
+
+Once your interval is set interval is reached, telex would call you /tick url integration, so a channel notification like the one shown below would be achieved
+
+![working integration](image-5.png)
+
