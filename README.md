@@ -25,7 +25,7 @@ pheidippides-api/
 │   ├── __init__.py
 │   └── config.py           # Application settings
 ├── tests/
-│   ├── __init__.py -->
+│   ├── __init__.py
 │   └── test_url.py       # API endpoint tests
 ├── main.py                 # Application entry point
 ├── requirements.txt        # Project dependencies
@@ -149,5 +149,6 @@ click on configure apps, then turn it on for that specific channel
 
 Once your interval is set interval is reached, telex would call you /tick url integration, so a channel notification like the one shown below would be achieved
 
-![working integration](screenshots/image-5.png)
+![test channel notification](screenshots/image-5.png)
 
+![working integration](/screenshots/telex-invite-image.png)
